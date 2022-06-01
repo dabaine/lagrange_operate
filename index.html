@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>图鉴</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="icon" href="./images/icon.png">
+
+    <style>
+        .body {
+            width:100%;
+            height:100%;
+            background: linear-gradient(45deg,rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%,rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 50%, transparent 75%);
+            background-color:#37474F;
+            background-size: 100px 100px;
+            background-repeat:repeat;
+
+        }
+        ul li{
+            font-weight:bolder;
+            font-size:150%;
+            color:#FFFFFF;
+        }
+
+        .img-item p {
+            margin:10px;
+            font-weight:bolder;
+            font-size:110%;
+            color:#CFFFEE;
+        }
+
+        .part-title {
+            margin:30px 0;
+            text-align:center;
+            font-weight:bolder;
+            font-size:250%;
+            color:#FFFFFF;
+        }
+        .img-item {
+            margin:10px 0;
+            text-align:center;
+            vertical-align:middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="body">
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">操作图鉴</li>
+                <li>资源图鉴</li>
+                <li>舰船图鉴</li>
+                <li>舰船属性图鉴</li>
+                <li>状态图鉴</li>
+                <li>舰船公司图鉴</li>
+                <li>经验技术值道具图鉴</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                        <div class="part-title">操作图鉴</div>
+                        <div class="part-content layui-row">
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/攻击.png" alt="行动">
+                                <p class="notes">行动</p>
+
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/封锁.png" alt="封锁">
+                                <p class="notes">封锁</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/建造.png" alt="建造">
+                                <p class="notes">建造</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/取消建造.png" alt="取消建造">
+                                <p class="notes">取消建造</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/增援.png" alt="增援">
+                                <p class="notes">增援</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/撤退.png" alt="撤退">
+                                <p class="notes">撤退</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/仓储运输.png" alt="仓储运输">
+                                <p class="notes">仓储运输</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/防卫.png" alt="防卫">
+                                <p class="notes">防卫</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/对接.png" alt="对接">
+                                <p class="notes">对接</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/查看.png" alt="查看">
+                                <p class="notes">查看</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/对接.png" alt="对接">
+                                <p class="notes">对接</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/集结进攻.png" alt="集结进攻">
+                                <p class="notes">集结进攻</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/记录.png" alt="记录">
+                                <p class="notes">记录</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/加速.png" alt="加速">
+                                <p class="notes">加速</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/开采.png" alt="开采">
+                                <p class="notes">开采</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/贸易.png" alt="贸易">
+                                <p class="notes">贸易</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/迁城.png" alt="迁城">
+                                <p class="notes">迁城</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/取消.png" alt="取消">
+                                <p class="notes">取消</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/确认.png" alt="确认">
+                                <p class="notes">确认</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/任务.png" alt="任务">
+                                <p class="notes">任务</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/删除.png" alt="删除">
+                                <p class="notes">删除</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/探索.png" alt="探索">
+                                <p class="notes">探索</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/停止.png" alt="停止">
+                                <p class="notes">停止</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/移动.png" alt="移动">
+                                <p class="notes">移动</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/中止计划.png" alt="中止计划">
+                                <p class="notes">中止计划</p>
+                            </div>
+                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                                <img src="./images/operate/驻守.png" alt="驻守">
+                                <p class="notes">驻守</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="layui-tab-item layui-show">
+                    <div class="part-title">资源图鉴</div>
+                    <div class="part-content layui-row">
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/电子货币.png" alt="电子货币">
+                            <p class="notes">电子货币</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/比邻星币.png" alt="比邻星币">
+                            <p class="notes">比邻星币</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/帝国币.png" alt="帝国币">
+                            <p class="notes">帝国币</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/技术值.png" alt="技术值">
+                            <p class="notes">技术值</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/技术储备.png" alt="技术储备">
+                            <p class="notes">技术储备</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/赛季积分.png" alt="赛季积分">
+                            <p class="notes">赛季积分</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/外观积分.png" alt="外观积分">
+                            <p class="notes">外观积分</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/金属.png" alt="金属">
+                            <p class="notes">金属</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/晶体.png" alt="晶体">
+                            <p class="notes">晶体</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/重氢.png" alt="重氢">
+                            <p class="notes">重氢</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/策略值.png" alt="策略值">
+                            <p class="notes">策略值</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/动员令.png" alt="动员令">
+                            <p class="notes">动员令</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/预制模组.png" alt="预制模组">
+                            <p class="notes">预制模组</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/经验.png" alt="经验">
+                            <p class="notes">经验</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/技术包.png" alt="技术包">
+                            <p class="notes">技术包</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/技术值道具.png" alt="技术值道具">
+                            <p class="notes">技术值道具</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/资源箱.png" alt="资源箱">
+                            <p class="notes">资源箱</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/舰船蓝图.png" alt="舰船蓝图">
+                            <p class="notes">舰船蓝图</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/实体舰船.png" alt="实体舰船">
+                            <p class="notes">实体舰船</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/涂装.png" alt="涂装">
+                            <p class="notes">涂装</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/武器技术.png" alt="武器技术">
+                            <p class="notes">武器技术</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/resource/徽记.png" alt="徽记">
+                            <p class="notes">徽记</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-tab-item layui-show">
+                    <div class="part-title">舰船图鉴</div>
+                    <div class="part-content layui-row">
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/航空母舰.png" alt="航空母舰">
+                            <p class="notes">航空母舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/战列巡洋舰.png" alt="战列巡洋舰">
+                            <p class="notes">战列巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/战列舰.png" alt="战列舰">
+                            <p class="notes">战列舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/支援舰.png" alt="支援舰">
+                            <p class="notes">支援舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/巡洋舰.png" alt="巡洋舰">
+                            <p class="notes">巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/驱逐舰.png" alt="驱逐舰">
+                            <p class="notes">驱逐舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/护卫舰.png" alt="护卫舰">
+                            <p class="notes">护卫舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/护航艇.png" alt="护航艇">
+                            <p class="notes">护航艇</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/战机.png" alt="战机">
+                            <p class="notes">战机</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/无人机.png" alt="无人机">
+                            <p class="notes">无人机</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/载机平台.png" alt="载机平台">
+                            <p class="notes">载机平台</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/载机配置.png" alt="载机配置">
+                            <p class="notes">载机配置</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/载机未满.png" alt="载机未满">
+                            <p class="notes">载机未满</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/载机已满.png" alt="载机已满">
+                            <p class="notes">载机已满</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/重型工程船.png" alt="重型工程船">
+                            <p class="notes">重型工程船</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/中型工程船.png" alt="中型工程船">
+                            <p class="notes">中型工程船</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/轻型工程船.png" alt="轻型工程船">
+                            <p class="notes">轻型工程船</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/图鉴.png" alt="图鉴">
+                            <p class="notes">图鉴</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="layui-tab-item layui-show">
+                    <div class="part-title">舰船属性图鉴</div>
+                    <div class="part-content layui-row">
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/指挥值.png" alt="指挥值">
+                            <p class="notes">指挥值</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/仓储.png" alt="仓储">
+                            <p class="notes">仓储</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/耐久值.png" alt="耐久值">
+                            <p class="notes">耐久值</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/抵抗伤害.png" alt="抵抗伤害">
+                            <p class="notes">抵抗伤害</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/抵抗伤害加成.png" alt="抵抗伤害加成">
+                            <p class="notes">抵抗伤害加成</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/对舰火力.png" alt="对舰火力">
+                            <p class="notes">对舰火力</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/防空火力.png" alt="防空火力">
+                            <p class="notes">防空火力</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/攻城火力.png" alt="攻城火力">
+                            <p class="notes">攻城火力</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/单发伤害.png" alt="单发伤害">
+                            <p class="notes">单发伤害</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/实弹伤害.png" alt="实弹伤害">
+                            <p class="notes">实弹伤害</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/能量伤害.png" alt="能量伤害">
+                            <p class="notes">能量伤害</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/发射次数.png" alt="发射次数">
+                            <p class="notes">发射次数</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/固定时间.png" alt="固定时间">
+                            <p class="notes">固定时间</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/工程能力.png" alt="工程能力">
+                            <p class="notes">工程能力</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/开采速度.png" alt="开采速度">
+                            <p class="notes">开采速度</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/维修能力.png" alt="维修能力">
+                            <p class="notes">维修能力</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/系统效率.png" alt="系统效率">
+                            <p class="notes">系统效率</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/导弹.png" alt="导弹">
+                            <p class="notes">导弹</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/等离子体炸弹.png" alt="等离子体炸弹">
+                            <p class="notes">等离子体炸弹</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/抵抗伤害加成.png" alt="抵抗伤害加成">
+                            <p class="notes">抵抗伤害加成</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/轨道炮.png" alt="轨道炮">
+                            <p class="notes">轨道炮</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/护盾值.png" alt="护盾值">
+                            <p class="notes">护盾值</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/护盾值加成.png" alt="护盾值加成">
+                            <p class="notes">护盾值加成</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/火炮.png" alt="火炮">
+                            <p class="notes">火炮</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/冷却时间下降.png" alt="冷却时间下降">
+                            <p class="notes">冷却时间下降</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/离子炮.png" alt="离子炮">
+                            <p class="notes">离子炮</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/脉冲炮.png" alt="脉冲炮">
+                            <p class="notes">脉冲炮</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/命中提升.png" alt="命中提升">
+                            <p class="notes">命中提升</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/曲率速度.png" alt="曲率速度">
+                            <p class="notes">曲率速度</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/曲率速度加成.png" alt="曲率速度加成">
+                            <p class="notes">曲率速度加成</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/闪避率提升.png" alt="闪避率提升">
+                            <p class="notes">闪避率提升</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/系统耐久.png" alt="系统耐久">
+                            <p class="notes">系统耐久</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/巡航速度.png" alt="巡航速度">
+                            <p class="notes">巡航速度</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/巡航速度加成.png" alt="巡航速度加成">
+                            <p class="notes">巡航速度加成</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/鱼雷.png" alt="鱼雷">
+                            <p class="notes">鱼雷</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/载机能力.png" alt="载机能力">
+                            <p class="notes">载机能力</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship_attr/准备时间.png" alt="准备时间">
+                            <p class="notes">准备时间</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-tab-item layui-show">
+                    <div class="part-title">状态图鉴</div>
+                    <div class="part-content layui-row">
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/航空母舰.png" alt="航空母舰">
+                            <p class="notes">航空母舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/战列巡洋舰.png" alt="战列巡洋舰">
+                            <p class="notes">战列巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/战列舰.png" alt="战列舰">
+                            <p class="notes">战列舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/支援舰.png" alt="支援舰">
+                            <p class="notes">支援舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/巡洋舰.png" alt="巡洋舰">
+                            <p class="notes">巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/驱逐舰.png" alt="驱逐舰">
+                            <p class="notes">驱逐舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/护卫舰.png" alt="护卫舰">
+                            <p class="notes">护卫舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/护航艇.png" alt="护航艇">
+                            <p class="notes">护航艇</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/战机.png" alt="战机">
+                            <p class="notes">战机</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/无人机.png" alt="无人机">
+                            <p class="notes">无人机</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/载机平台.png" alt="载机平台">
+                            <p class="notes">载机平台</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/载机配置.png" alt="载机配置">
+                            <p class="notes">载机配置</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/载机未满.png" alt="载机未满">
+                            <p class="notes">载机未满</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/载机已满.png" alt="载机已满">
+                            <p class="notes">载机已满</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/重型工程船.png" alt="重型工程船">
+                            <p class="notes">重型工程船</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/中型工程船.png" alt="中型工程船">
+                            <p class="notes">中型工程船</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/轻型工程船.png" alt="轻型工程船">
+                            <p class="notes">轻型工程船</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/ship/图鉴.png" alt="图鉴">
+                            <p class="notes">图鉴</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="layui-tab-item layui-show">
+                    <div class="part-title">舰船公司图鉴</div>
+                    <div class="part-content layui-row">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/1.png" alt="1">
+                            <p class="notes">阿瑞斯军团</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/2.png" alt="2">
+                            <p class="notes">星际解放者</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/3.png" alt="3">
+                            <p class="notes">海雷丁家族</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/4.png" alt="4">
+                            <p class="notes">流放者</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/5.png" alt="5">
+                            <p class="notes">地球发展银行</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/6.png" alt="6">
+                            <p class="notes">开发者投资公司</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/7.png" alt="7">
+                            <p class="notes">环球生物攻城技术公司</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/8.png" alt="8">
+                            <p class="notes">捍卫者</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/9.png" alt="9">
+                            <p class="notes">鹰翼卫队</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/10.png" alt="10">
+                            <p class="notes">木星工业集团</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/11.png" alt="11">
+                            <p class="notes">赫尔曼大学</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/12.png" alt="12">
+                            <p class="notes">灭火者武装</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/13.png" alt="13">
+                            <p class="notes">欧迪尼库斯军团</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/14.png" alt="14">
+                            <p class="notes">仲裁者委员会</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/15.png" alt="15">
+                            <p class="notes">雷火科技工业集团</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/16.png" alt="16">
+                            <p class="notes">地球圈科技研究所</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/17.png" alt="17">
+                            <p class="notes">探险者联盟</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/18.png" alt="18">
+                            <p class="notes">盘古拓展与开发公司</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/19.png" alt="19">
+                            <p class="notes">漫游者兄弟会</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                            <img src="./images/company/21.png" alt="21">
+                            <p class="notes">诺玛航空集团</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-tab-item layui-show">
+                    <div class="part-title">经验技术值道具图鉴</div>
+                    <div class="part-content layui-row">
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/小型模拟战斗数据.png" alt="小型模拟战斗数据">
+                            <p class="notes">小型模拟战斗数据</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/小型模拟战斗数据-护卫舰.png" alt="小型模拟战斗数据-护卫舰">
+                            <p class="notes">小型模拟战斗数据-护卫舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/小型模拟战斗数据-驱逐舰.png" alt="小型模拟战斗数据-驱逐舰">
+                            <p class="notes">小型模拟战斗数据-驱逐舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/小型模拟战斗数据-巡洋舰.png" alt="小型模拟战斗数据-巡洋舰">
+                            <p class="notes">小型模拟战斗数据-巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/小型模拟战斗数据-战列巡洋舰.png" alt="小型模拟战斗数据-战列巡洋舰">
+                            <p class="notes">小型模拟战斗数据-战列巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/小型模拟战斗数据-航空母舰.png" alt="小型模拟战斗数据-航空母舰">
+                            <p class="notes">小型模拟战斗数据-航空母舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/中型模拟战斗数据.png" alt="中型模拟战斗数据">
+                            <p class="notes">中型模拟战斗数据</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/中型模拟战斗数据-护卫舰.png" alt="中型模拟战斗数据-护卫舰">
+                            <p class="notes">中型模拟战斗数据-护卫舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/中型模拟战斗数据-驱逐舰.png" alt="中型模拟战斗数据-驱逐舰">
+                            <p class="notes">中型模拟战斗数据-驱逐舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/中型模拟战斗数据-巡洋舰.png" alt="中型模拟战斗数据-巡洋舰">
+                            <p class="notes">中型模拟战斗数据-巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/中型模拟战斗数据-战列巡洋舰.png" alt="中型模拟战斗数据-战列巡洋舰">
+                            <p class="notes">中型模拟战斗数据-战列巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/中型模拟战斗数据-航空母舰.png" alt="中型模拟战斗数据-航空母舰">
+                            <p class="notes">中型模拟战斗数据-航空母舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/大型模拟战斗数据.png" alt="大型模拟战斗数据">
+                            <p class="notes">大型模拟战斗数据</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/大型模拟战斗数据-护卫舰.png" alt="大型模拟战斗数据-护卫舰">
+                            <p class="notes">大型模拟战斗数据-护卫舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/大型模拟战斗数据-驱逐舰.png" alt="大型模拟战斗数据-驱逐舰">
+                            <p class="notes">大型模拟战斗数据-驱逐舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/大型模拟战斗数据-巡洋舰.png" alt="大型模拟战斗数据-巡洋舰">
+                            <p class="notes">大型模拟战斗数据-巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/大型模拟战斗数据-战列巡洋舰.png" alt="大型模拟战斗数据-战列巡洋舰">
+                            <p class="notes">大型模拟战斗数据-战列巡洋舰</p>
+                        </div>
+                        <div class="img-item layui-col-xs6 layui-col-sm4 layui-col-md2">
+                            <img src="./images/exp/大型模拟战斗数据-航空母舰.png" alt="大型模拟战斗数据-航空母舰">
+                            <p class="notes">大型模拟战斗数据-航空母舰</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./layui/layui.js"></script>
+    <script>
+        layui.use('element', function(){
+        var element = layui.element;
+        });
+    </script>
+
+</body>
+</html>
