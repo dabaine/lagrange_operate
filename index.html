@@ -8,16 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="./layui/css/layui.css">
     <link rel="icon" href="./images/icon.png">
-
     <style>
-        .body {
+
+        body {
             width:100%;
             height:100%;
             background: linear-gradient(45deg,rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 25%, transparent 25%, transparent 50%,rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 75%, transparent 50%, transparent 75%);
             background-color:#37474F;
             background-size: 100px 100px;
             background-repeat:repeat;
-
         }
         ul li{
             font-weight:bolder;
@@ -44,6 +43,30 @@
             text-align:center;
             vertical-align:middle;
         }
+
+        .footer {
+            font-weight:bolder;
+            font-size:100%;
+            color:#FFFFFF;
+            width:100%;
+            height:100%;
+        }
+
+        .footer-item{
+            text-align:center;
+            vertical-align:bottom;
+            margin:0;
+            padding:0;
+        }
+
+        .footer-item-left, .footer-item-right {
+            margin:20px 30px;
+            border:solid 1px #ddd;
+            padding:10px;
+            border-style:dotted;
+<!--            border-color:#0ae;-->
+        }
+
     </style>
 </head>
 <body>
@@ -66,7 +89,6 @@
                             <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
                                 <img src="./images/operate/攻击.png" alt="行动">
                                 <p class="notes">行动</p>
-
                             </div>
                             <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
                                 <img src="./images/operate/封锁.png" alt="封锁">
@@ -103,10 +125,6 @@
                             <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
                                 <img src="./images/operate/查看.png" alt="查看">
                                 <p class="notes">查看</p>
-                            </div>
-                            <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                                <img src="./images/operate/对接.png" alt="对接">
-                                <p class="notes">对接</p>
                             </div>
                             <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
                                 <img src="./images/operate/集结进攻.png" alt="集结进攻">
@@ -498,84 +516,229 @@
                     <div class="part-title">状态图鉴</div>
                     <div class="part-content layui-row">
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/航空母舰.png" alt="航空母舰">
-                            <p class="notes">航空母舰</p>
+                            <img src="./images/statue/采集1.png" alt="采集">
+                            <p class="notes">采集</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/战列巡洋舰.png" alt="战列巡洋舰">
-                            <p class="notes">战列巡洋舰</p>
+                            <img src="./images/statue/采集2.png" alt="采集">
+                            <p class="notes">采集</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/战列舰.png" alt="战列舰">
-                            <p class="notes">战列舰</p>
+                            <img src="./images/statue/采集3.png" alt="战列舰">
+                            <p class="notes">采集</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/支援舰.png" alt="支援舰">
-                            <p class="notes">支援舰</p>
+                            <img src="./images/statue/建造1.png" alt="建造1">
+                            <p class="notes">建造</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/巡洋舰.png" alt="巡洋舰">
-                            <p class="notes">巡洋舰</p>
+                            <img src="./images/statue/建造2.png" alt="建造1">
+                            <p class="notes">建造</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/驱逐舰.png" alt="驱逐舰">
-                            <p class="notes">驱逐舰</p>
+                            <img src="./images/statue/建造3.png" alt="建造1">
+                            <p class="notes">建造</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/护卫舰.png" alt="护卫舰">
-                            <p class="notes">护卫舰</p>
+                            <img src="./images/statue/修理1.png" alt="修理">
+                            <p class="notes">修理</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/护航艇.png" alt="护航艇">
-                            <p class="notes">护航艇</p>
+                            <img src="./images/statue/修理2.png" alt="修理">
+                            <p class="notes">修理</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/战机.png" alt="战机">
-                            <p class="notes">战机</p>
+                            <img src="./images/statue/修理3.png" alt="修理">
+                            <p class="notes">修理</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/无人机.png" alt="无人机">
-                            <p class="notes">无人机</p>
+                            <img src="./images/statue/采集规模提升1.png" alt="采集规模提升">
+                            <p class="notes">采集规模提升</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/载机平台.png" alt="载机平台">
-                            <p class="notes">载机平台</p>
+                            <img src="./images/statue/采集规模提升2.png" alt="采集规模提升">
+                            <p class="notes">采集规模提升</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/载机配置.png" alt="载机配置">
-                            <p class="notes">载机配置</p>
+                            <img src="./images/statue/就近上传1.png" alt="就近上传">
+                            <p class="notes">就近上传</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/载机未满.png" alt="载机未满">
-                            <p class="notes">载机未满</p>
+                            <img src="./images/statue/就近上传2.png" alt="就近上传">
+                            <p class="notes">就近上传</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/载机已满.png" alt="载机已满">
-                            <p class="notes">载机已满</p>
+                            <img src="./images/statue/采集速度提升1.png" alt="采集速度提升 ">
+                            <p class="notes">采集速度提升</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/重型工程船.png" alt="重型工程船">
-                            <p class="notes">重型工程船</p>
+                            <img src="./images/statue/采集速度提升2.png" alt="采集速度提升">
+                            <p class="notes">采集速度提升</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/中型工程船.png" alt="中型工程船">
-                            <p class="notes">中型工程船</p>
+                            <img src="./images/statue/守军恢复1.png" alt="守军恢复">
+                            <p class="notes">守军恢复</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/轻型工程船.png" alt="轻型工程船">
-                            <p class="notes">轻型工程船</p>
+                            <img src="./images/statue/守军恢复2.png" alt="守军恢复">
+                            <p class="notes">守军恢复</p>
                         </div>
                         <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
-                            <img src="./images/ship/图鉴.png" alt="图鉴">
-                            <p class="notes">图鉴</p>
+                            <img src="./images/statue/守军恢复3.png" alt="守军恢复">
+                            <p class="notes">守军恢复</p>
                         </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/驻守1.png" alt="驻守">
+                            <p class="notes">驻守</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/驻守2.png" alt="驻守">
+                            <p class="notes">驻守</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/攻击1.png" alt="攻击">
+                            <p class="notes">攻击</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/攻击2.png" alt="攻击">
+                            <p class="notes">攻击</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/任务攻击目标1.png" alt="任务攻击目标">
+                            <p class="notes">任务攻击目标</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/任务攻击目标2.png" alt="任务攻击目标">
+                            <p class="notes">任务攻击目标</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/集结中1.png" alt="集结中">
+                            <p class="notes">集结中</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/集结中2.png" alt="集结中">
+                            <p class="notes">集结中</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/增援1.png" alt="增援">
+                            <p class="notes">增援</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/增援2.png" alt="增援">
+                            <p class="notes">增援</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/探索1.png" alt="探索">
+                            <p class="notes">探索</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/探索2.png" alt="探索">
+                            <p class="notes">探索</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/探索3.png" alt="探索">
+                            <p class="notes">探索</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/免战1.png" alt="免战">
+                            <p class="notes">免战</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/免战2.png" alt="免战">
+                            <p class="notes">免战</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/免战3.png" alt="免战">
+                            <p class="notes">免战</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/联络1.png" alt="联络">
+                            <p class="notes">联络</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/联络2.png" alt="联络">
+                            <p class="notes">联络</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/同盟视野共享1.png" alt="同盟视野共享">
+                            <p class="notes">同盟视野共享</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/同盟视野共享2.png" alt="同盟视野共享">
+                            <p class="notes">同盟视野共享</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/集结1.png" alt="集结">
+                            <p class="notes">集结</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/集结2.png" alt="集结">
+                            <p class="notes">集结</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/任务移动目标1.png" alt="任务移动目标">
+                            <p class="notes">任务移动目标</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/任务移动目标2.png" alt="任务移动目标">
+                            <p class="notes">任务移动目标</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/撤退1.png" alt="撤退">
+                            <p class="notes">撤退</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/撤退2.png" alt="撤退">
+                            <p class="notes">撤退</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/撤退3.png" alt="撤退">
+                            <p class="notes">撤退</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/曲率航行1.png" alt="曲率航行">
+                            <p class="notes">曲率航行</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/曲率航行2.png" alt="曲率航行">
+                            <p class="notes">曲率航行</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/曲率航行3.png" alt="曲率航行">
+                            <p class="notes">曲率航行</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/航行1.png" alt="航行">
+                            <p class="notes">航行</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/航行2.png" alt="航行">
+                            <p class="notes">航行</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/停泊1.png" alt="停泊">
+                            <p class="notes">停泊</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/停泊2.png" alt="停泊">
+                            <p class="notes">停泊</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/拆除1.png" alt="拆除">
+                            <p class="notes">拆除</p>
+                        </div>
+                        <div class="img-item layui-col-xs4 layui-col-sm2 layui-col-md1">
+                            <img src="./images/statue/拆除2.png" alt="拆除">
+                            <p class="notes">拆除</p>
+                        </div>
+
                     </div>
 
                 </div>
                 <div class="layui-tab-item layui-show">
-                    <div class="part-title">舰船公司图鉴</div>
+                    <div class="part-title">星系势力图鉴</div>
                     <div class="part-content layui-row">
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2" onclick="alert_details()">
                             <img src="./images/company/1.png" alt="1">
                             <p class="notes">阿瑞斯军团</p>
                         </div>
@@ -653,7 +816,7 @@
                         </div>
                         <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
                             <img src="./images/company/21.png" alt="21">
-                            <p class="notes">诺玛航空集团</p>
+                            <p class="notes">诺玛运输集团</p>
                         </div>
                     </div>
                 </div>
@@ -735,16 +898,74 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-item">
+            <div class="layui-inline footer-item-left">
+                <span id="busuanzi_container_site_pv">
+                    <div class="">
+                        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                    </div>
+                </span>
+            </div>
+            <div class="layui-inline footer-item-right">
+                <span id="busuanzi_container_site_uv">
+                    <div class="">
+                        本站总访客数<span id="busuanzi_value_site_uv"></span>人
+                    </div>
+                </span>
+            </div>
         </div>
     </div>
 
-
     <script src="./layui/layui.js"></script>
     <script>
-        layui.use('element', function(){
-        var element = layui.element;
-        });
-    </script>
+        layui.use(['element','layer','jquery'], function(){
+            var layer = layui.layer
+            ,$ = layui.jquery
+            ,element = layui.element;
 
+            var mark = {
+
+                "欧迪尼库斯军团":"在旧帝国时期曾是“伊斯曼”家族的护卫队——被称为“蓝色卫队”，后在战争中逐渐演变为大型军事集团。军团成员对军团荣誉有高度认同，有着严明的作战纪律，并拥有极高的执行力和明确的战略规划。#r军团总部建于艾尔尼兰星系-丽塔星-珍珠城，军团为所管辖星系的发展和扩张制定了详尽的规划。#r在军团的母星环境恶化之后，军团致力于寻找宜居的类地行星，并在多个宜居行星上建立了地表改造实验基地。",
+                "阿瑞斯军团":"在战争中兴起的军阀势力，以骁勇善战著称，其舰队擅长猛攻与突袭，常有以少胜多的辉煌战绩。#r军团起源于遥远的荒漠星系，并在战争中快速扩张范围，后因总部所在的城市遭到摧毁而迁移至波赫约拉星系，在伊斯坦因城建立了新的总部。#r近年来占领了新天马座β星系、杜尔星系以及奥格玛星系边缘星域的多个城市，并与鹰翼卫队、欧迪尼库斯军团等多个势力之间发生了数次武装冲突。",
+                "捍卫者":"在星际战争时期，位于德洛姆星系边缘的一个流放之地曾发生大规模的暴动事件，事件的组织者成立了“捍卫者”军团他们攻占了流放之地作为基地，在军团的率领下在星系内扩张势力范围，逐渐形成了区域性的统治力量。#r军团在管辖星系建立起了高秩序的社区，对外明确声明：军团只维护所辖城市的归属，不会主动参与任何与其他势力之间的竞争。#r近年来，阿瑞斯军团在凡塞提星附近的空域发生了多次武装冲突，形成了持续对峙的局面。",
+                "鹰翼卫队":"拥有久远的移民历史，从一个跨星系大型集团发展演变而来的军阀集团。前身是崔顿开发与投资集团，曾是旧帝国的公国成员势力，集团投资控股了207家中小型企业，经营范围涉及太空旅游、太空开采、运输贸易及商业地产等多个领域。#r鹰翼卫队近年来占领了科利亚斯星系、新天鹅座61等多个星系中的重要城市，通过垄断星系的生产原料、倾销高价值产品来赚取大量利益。",
+                "星际解放者":"战争时期，荒漠之域出现了一股解放民众的反抗势力，被称为“帕伦克”自由军，但在“帕伦克”战役中被阿瑞斯军团击溃而解体。自由军的组建者胡安·杜罗不久后在彼塔斯港集结了民众力量，成立了“星际解放者”，从崔顿投资与开发集团手中夺取了对彼塔斯港的控制权，后将此城更名为“自由港”。#r近年来，星际解放者在多个星系的重要城市成立了分部，势力影响范围日益扩增。",
+                "盘古拓展与开发公司":"星系著名的基础设施建设商，致力于各种天体的开发利用和基础设施建设，拥有强大的建设技术和能力。#r参与建设的星门约60余座，包括：山海星门、太阳-比邻星星门、“卡斯特”星门等。#r参与建设的太空城约170座，包括：新苏伊士、圣洛伦索、伊索佩斯城等星系著名城市。",
+                "木星工业集团":"木星集团在星际战争时期由“木星舰船制造厂”与“金乌能源集团”合并而来，通过战争吞并了多个企业，并统一整合为“木星工业”。近年来逐渐发展为太阳系顶尖的舰船设计和制造公司，并与地球圈中的许多研究机构和大学均有合作关系，来保证其舰船技术在业内能够持续领先。#r其总部位于伊奥城，城内建设有舰船研究所、武器研究所、技术逆向所、引擎研究和开发所等多个机构。",
+                "诺玛运输集团":"诺玛运输集团是科雷戈星系中最为著名的舰船制造商之一，同时拥有十分庞大的跨星系运输航路，其业务覆盖了军事舰船、民用运输、小行星采掘、太空城市建设等多个领域。由四个跨星系知名企业于后拉格朗日时代合并成立。#r集团擅长通用型舰船的制造的生产，拥有规模很大的舰船生产线和快速生产的能力，为多个军阀有着密切的合作，主要为舰船交易。",
+                "安东尼奥斯财团":"安东尼奥斯财团是公认的当前所有已知星系中综合实力最强的财团之一，旗下的“罗安与卡利莱恩”太空机械公司、安氏精密科技公司等均是船舰与武器技术领域的知名企业。#r财团由“圣安德鲁集团”和“安氏”离子研究中心合并而来，并在星际战争中依靠风险投资崛起，后逐渐垄断了多个小行星的矿石资源，形成了庞大的航运网络，控制了多条关键运输通道，并且财团在军事、政治、太空金融等多个领域均有渗透。",
+                "海雷丁家族":"海雷丁家族世代经营纳辛星系，家族对地面防御和舰船护盾技术方面有深厚的积累，星系的各个城市内所建设的太空防御体系，曾经多次击退过漫游者兄弟会的侵袭。#r近年来，纳辛星系附近经常可以检测到异常强大的电磁波和引力波信号，部分舰船航行至此甚至出现仪器失灵的情况，有传闻家族一直致力于寻找“流放者”的踪迹。",
+                "雷火科技工业集团":"雷火科技工业集团是著名的星系武器制造商之一，其下设置有导弹研究所、定位研究所、燃料研究所、鱼雷演技所等机构，对各类武器制造均有涉及，尤其在导弹、鱼雷技术上有深厚的技术积累。与多个军阀势力及企业均有军火业务往来。"
+
+            }
+
+            function history_story (arg1,arg2) {
+                for(var instance in arg1){
+                    console.log(arg1[instance]);
+                    console.log(instance);
+                    console.log(arg2);
+                    if(instance === arg2){
+                        return arg1[instance]
+                    }
+                }
+                return "说明文档仍在补充中,请谅解！"
+            }
+
+            $(".img-item").on("click", function(data) {
+                var that = this;
+                var value = history_story(mark,this.lastElementChild.innerHTML);
+                layer.tips(value,this);
+
+            });
+
+
+        });
+
+    </script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
