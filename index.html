@@ -738,15 +738,15 @@
                 <div class="layui-tab-item layui-show">
                     <div class="part-title">星系势力图鉴</div>
                     <div class="part-content layui-row">
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2" onclick="alert_details()">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/1.png" alt="1">
                             <p class="notes">阿瑞斯军团</p>
                         </div>
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/2.png" alt="2">
                             <p class="notes">星际解放者</p>
                         </div>
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/3.png" alt="3">
                             <p class="notes">海雷丁家族</p>
                         </div>
@@ -766,15 +766,15 @@
                             <img src="./images/company/7.png" alt="7">
                             <p class="notes">环球生物攻城技术公司</p>
                         </div>
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/8.png" alt="8">
                             <p class="notes">捍卫者</p>
                         </div>
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/9.png" alt="9">
                             <p class="notes">鹰翼卫队</p>
                         </div>
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/10.png" alt="10">
                             <p class="notes">木星工业集团</p>
                         </div>
@@ -786,7 +786,7 @@
                             <img src="./images/company/12.png" alt="12">
                             <p class="notes">灭火者武装</p>
                         </div>
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/13.png" alt="13">
                             <p class="notes">欧迪尼库斯军团</p>
                         </div>
@@ -794,7 +794,7 @@
                             <img src="./images/company/14.png" alt="14">
                             <p class="notes">仲裁者委员会</p>
                         </div>
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/15.png" alt="15">
                             <p class="notes">雷火科技工业集团</p>
                         </div>
@@ -806,7 +806,7 @@
                             <img src="./images/company/17.png" alt="17">
                             <p class="notes">探险者联盟</p>
                         </div>
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/18.png" alt="18">
                             <p class="notes">盘古拓展与开发公司</p>
                         </div>
@@ -814,7 +814,7 @@
                             <img src="./images/company/19.png" alt="19">
                             <p class="notes">漫游者兄弟会</p>
                         </div>
-                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2">
+                        <div class="img-item layui-col-xs6 layui-col-sm3 layui-col-md2 on_tips">
                             <img src="./images/company/21.png" alt="21">
                             <p class="notes">诺玛运输集团</p>
                         </div>
@@ -901,7 +901,7 @@
 
         </div>
     </div>
-    <div class="footer">
+    <div class="footer hidden">
         <div class="footer-item">
             <div class="layui-inline footer-item-left">
                 <span id="busuanzi_container_site_pv">
@@ -955,7 +955,7 @@
                 return "说明文档仍在补充中,请谅解！"
             }
 
-            $(".img-item").on("click", function(data) {
+            $(".on_tips").on("click", function(data) {
                 var that = this;
                 var value = history_story(mark,this.lastElementChild.innerHTML);
                 layer.tips(value,this,{tips:3});
